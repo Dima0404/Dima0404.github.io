@@ -1,7 +1,119 @@
   <style> 
-    
+    /* основные стили */
+* {
+margin: 0;
+padding: 0;
+}
+body {
+background: url("../images/body-bg.jpg") no-repeat fixed center top #FFFFFF;
+color: #7F7F7F;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 12px;
+line-height: 17px;
+}
+img {
+border: 0 none;
+}
+.container {
+margin:30px auto 0;
+position:relative;
+text-align:left;
+width:1000px;
+padding-left: 20px;
+padding-right: 20px;
+}
     
   </style>
-<h1>ОШИБКА  404</h1>
-<h4>Зайдите потом на сайт</h4>
-<script id="chatBroEmbedCode">/* Chatbro Widget Embed Code Start */function ChatbroLoader(chats,async){async=!1!==async;var params={embedChatsParameters:chats instanceof Array?chats:[chats],lang:navigator.language||navigator.userLanguage,needLoadCode:'undefined'==typeof Chatbro,embedParamsVersion:localStorage.embedParamsVersion,chatbroScriptVersion:localStorage.chatbroScriptVersion},xhr=new XMLHttpRequest;xhr.withCredentials=!0,xhr.onload=function(){eval(xhr.responseText)},xhr.onerror=function(){console.error('Chatbro loading error')},xhr.open('GET','//www.chatbro.com/embed.js?'+btoa(unescape(encodeURIComponent(JSON.stringify(params)))),async),xhr.send()}/* Chatbro Widget Embed Code End */ChatbroLoader({encodedChatId: '06Lah'});</script>
+<h1>Привет</h1>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>E-Store single page layout | Script Tutorials</title>
+<meta charset="utf-8">
+
+<!-- Подключаем таблицы стилей -->
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen">
+
+<!-- Подключаем скрипты -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="js/main.js"></script>
+<!--[if lt IE 9]> 
+<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+</head>
+  <body>
+
+<div>
+
+<header><!-- Раздел шапки страницы -->
+
+<nav><!-- Основное меню -->
+<ul>
+<li class="selected"><a href="#">Home</a></li>
+<li><a href="#">Specials</a></li>
+.......
+</ul>
+</nav>
+
+<div class="top_head"><!-- Элемент верха шапки страницы -->
+<div class="logo"><!-- Логотип -->
+<a href="https://www.script-tutorials.com/">
+<img src="images/logo.jpg" title="E-Store template" alt="E-Store template" />
+</a>
+</div>
+
+<section id="search"><!-- Форма поиска -->
+<form action="#" onsubmit="return false;" method="get">
+.......
+</form>
+
+<ul id="social"><!-- Значки социальных сетей -->
+.......
+</ul>
+</section>
+</div>
+
+<section id="submenu"><!-- Дополнительное меню -->
+<ul>
+<li><a href="#">Category #1</a></li>
+<li><a href="#">Category #2</a></li>
+.......
+</ul>
+</section>
+
+</header>
+
+<div id="slider"><!-- Прокручивающаяся галерея рекламных изображений -->
+
+<section id="slider-wrapper">
+.......
+</section>
+</div>
+
+<div id="main"><!-- Основной раздел содержимого -->
+<section id="content"><!-- Основной подраздел содержимого -->
+<div id="left">
+<h3>Last products</h3>
+<ul>
+............
+</ul>
+</div>
+<div id="right">
+<h3>Top sells</h3>
+<ul>
+............
+</ul>
+</div>
+</section>
+</div>
+
+<footer><!-- Подвал сайта -->
+<div id="privacy">
+</div>
+</footer>
+
+</div>
+</body>
