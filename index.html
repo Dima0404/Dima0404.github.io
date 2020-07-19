@@ -1,150 +1,98 @@
-<style> 
-    
-    
-  </style>
-<h1>Привет</h1>
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Главная страница | Ava.City</title>
-<script src="/cdn-cgi/apps/head/2FWxsR7OVNjd30Yqe1b_vfiZ8rM.js"></script><link rel="apple-touch-icon" sizes="180x180" href="/files/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/files/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/files/icons/favicon-16x16.png">
-<link rel="manifest" href="/files/icons/site.webmanifest">
-<link rel="mask-icon" href="/files/icons/safari-pinned-tab.svg" color="#222222">
-<link rel="shortcut icon" href="/files/icons/favicon.ico">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="/files/icons/browserconfig.xml">
-<meta name="theme-color" content="#f0f0f0">
-<link rel="stylesheet" href="/files/css/reset.css?2">
-<link rel="stylesheet" href="/files/css/main.css?48">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
 
-<script type="text/javascript">
-      var _paq = window._paq || [];
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//matomo.ava.city/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
-        _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
+* {
+    box-sizing: border-box;
+}
 
+/* Add padding to containers */
+.container {
+    padding: 16px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+</style>
 </head>
-<body class="index">
-<header class="logged-in">
-<div class="header-content">
-<ul>
-<li><a href="/">Главная</a></li>
-<li><a href="/start">Начать игру</a></li>
-<li><a href="/plus">Премиум</a></li>
-<li><a href="/shop">Магазин</a></li>
-<li><a href="https://t.me/avacity_2_0">Чат</a></li>
-<li><a href="https://t.me/avacity_server">Новости</a></li>
-</ul>
-<div class="control control-logged-in">
-<a class="plus" href="/plus">P+</a>
-<a class="profile-link" href="/profile">
-<img src="https://ava.city/files/images/user.png">
-<p>39672</p>
-</a>
-<div class="settings-wrapper">
-<picture id="settings-icon"></picture>
-<div class="settings-content">
-<a href="/profile">Мой аккаунт</a>
-<a href="/profile#settings">Настройки</a>
-<a href="https://vk.me/nebot3">Помощь</a>
-<a href="/logout">Выход</a>
-</div>
-</div>
-</div>
-</div>
-</header>
-<div class="mobile-bar"></div>
-<div class="mobile-menu logged-in">
-<ul class="wrapper">
-<li>
-<a href="/">Главная</a>
-</li>
-<li>
-<a href="/start">Начать игру</a>
-</li>
-<li>
-<a href="/plus">Премиум</a>
-</li>
-<li>
-<a href="/shop">Магазин</a>
-</li>
-<li>
-<a href="https://t.me/avacity_2_0">Чат</a>
-</li>
-<li>
-<a href="https://t.me/avacity_server">Новости</a>
-</li>
-<li class="logged-in">
-<a href="/profile">39672</a>
-</li>
-<li class="logged-in">
-<a href="/logout">Выход</a>
-</li>
-</ul>
-</div>
-<main>
-<div class="full-height">
-<picture class="background"></picture>
-<div class="content">
-<img class="logo" src="/files/images/logo.png?2" alt="Ava.City">
-<div>
-<p>Сейчас онлайн:</p>
-<span>933</span>
-</div>
-<a href="/start">
-<button>Играть</button>
-</a>
-</div>
-</div>
-<h1 class="about">ОБ AVA.CITY</h1>
-<div class="about-sections">
-<section>
-<h1>Стабильный аптайм</h1>
-<p>
-Вы можете забыть о лагах и задержках! Ведь у нас собственное серверное ядро написанное с нуля, мы постоянно его развиваем и улучшаем превнося изменения и убирая ошибки.
-</p>
-</section>
-<section>
-<h1>Высокий онлайн</h1>
-<p>
-Наш сервер способен выдерживать до нескольких тысяч одновременно играющих пользователей, вы всегда найдете с кем пообщаться!
-</p>
-</section>
-<section>
-<h1>Активное коммьюнити</h1>
-<p>
-Мы и наши игроки постоянно стараемся заниматься чем-либо интересным на сервере. Мы часто проводим эвенты и конкурсы, а еще мы всегда готовы поддержать любой движ на сервере!
-</p>
-</section>
-<section>
-<h1>Техническая поддержка</h1>
-<p>
-Мы всегда готовы ответить на все ваши вопросы и помочь с решением возникших при игре проблем.
-</p>
-</section>
-<a class="start" href="/start">
-<button>НАЧАТЬ ИГРАТЬ</button>
-</a>
-</div>
-</main>
-<footer>
-<p>2020, Ava.City</p>
-<picture></picture>
-</footer>
-<script src="/files/js/script.js?3"></script>
-<script src="/files/js/script_logged.js?4"></script>
+<body>
+
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
 </body>
 </html>
