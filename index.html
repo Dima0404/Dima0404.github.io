@@ -1,87 +1,27 @@
-<title>Интернет-магазин</title>
+<title>Вход</title>
 <style>	
-table{
-width: 100%;
-border-collapse:collapse;
-border-spacing:0
-}
-table, td, th {
-border: 1px solid #595959;
-}
-td, th {
-padding: 3px;
-width: 30px;
-height: 35px;
-}
-th {
-background-color: #7accee;
-}
-</style>
-<html><head><style>
 
 </style>
-</head><body style="background-color: #cdc5c2"><h1>Я кушаю :-)</h1>
-<p>Делаю крутые сайты <a href="https://dima0404.github.io/ind-01.html"> HTML и css </a>Регистрируйтесь</p>
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {margin:0;}
-
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
-}
-
-.main {
-  padding: 16px;
-  margin-top: 30px;
-  height: 1500px; /* Used in this example to enable scrolling */
-}
-</style>
-
-
-
-<div class="navbar">
-  <a href="ind-01.html">Все</a><a href="#home">Одежда</a>
-  <a href="#news">Телефон</a>
-<a href="#news">Правильно</a>
-<a href="#news">О сайте</a>
-<a href="#news">Корзина</a>
-  
-</div>
-
-<div class="main">
-	<h1>О сайте</h1>
-</div>
+<html><head>
+    <meta charset="utf-8">
+	</head>
+<body>
+    
+    <form method="post" action="/login">
+        <table>
+            <tbody><tr>
+                <td><label for="loginField">Логин</label></td>
+                <td><input id="loginField" type="text" name="login" required=""></td>
+            </tr>
+            <tr>
+                <td><label for="passwordField">Пароль</label></td>
+                <td><input id="passwordField" type="password" name="password" required=""></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center"><input type="submit" value="Войти"></td>
+            </tr>
+        </tbody></table>
+    </form>
+    <p><a href="/register">Зарегистрироваться</a></p>
 
 </body></html>
-<a href="#top">Наверх</a>
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    <button onclick="window.location.href = 'https://vk.com/tvoyabunny';">Администратор магазина</button>
-  </body>
-</html>
-<html><head>    <meta charset="utf-8">    </head><body>    <form method="post" action="/login">        <table>            <tbody><tr>                <td><label for="loginField">Логин</label></td>                <td><input id="loginField" type="text" name="login" required=""></td>            </tr>            <tr>                <td><label for="passwordField">Пароль</label></td>                <td><input id="passwordField" type="password" name="password" required=""></td>            </tr>            <tr>                <td colspan="2" style="text-align: center"><input type="submit" value="Войти"></td>            </tr>        </tbody></table>    </form>    <p><a href="/register">Зарегистрироваться</a></p></body></html>
