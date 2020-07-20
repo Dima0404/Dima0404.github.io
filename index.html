@@ -1,5 +1,27 @@
 <title>Вход</title>
 <style>	
+      body {
+  background-color: #951a46; /* цвет фона всей страницы */
+  font-family: Roboto, sans-serif; /* семейство шрифта */
+}
+
+.button {
+  display: inline-block; /* строчно-блочный */
+  margin: 100px 400px; /* отступы от края браузера */
+  padding: 20px 60px; /* расстояние от текста до края кнопки */
+    background-color: #e44b9b; /* цвет кнопки  */
+  box-shadow: 0px 6px #f7f8e8; /* задана тень */
+  border-radius: 5px; /* скругление углов */
+  font-size: 27px; /* размер шрифта */
+  text-transform: uppercase; /* трансформировать в заглавные буквы */
+  text-decoration: none; /* не подчеркивать ссылку */
+  transition: 0.2s; /* плавный ховер эффект */
+  color: #f7f8e8; /* цвет текста на кнопке */
+}
+
+.button:hover {
+  background-color: #949a9a; /* замена цвета кнопки при наведении */
+  }
 * {
     box-sizing: border-box;
 }
@@ -107,4 +129,7 @@ input[type=submit]:hover {
       <input type="submit" value="Отправить">
     </div>
   </form>
+    <a class="btn" href="#">Learn More</a>
+ <a class="button" href="#">Купить</a>
+
 </div>
