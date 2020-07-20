@@ -1,16 +1,110 @@
 <title>Вход</title>
 <style>	
+* {
+    box-sizing: border-box;
+}
 
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #E91E63;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #C2185B;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #F8BBD0;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    color: #212121;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
 </style>
-<button id="login" class="button blue">
-  <i class="fa fa-unlock"></i>
-  <span>Войти</span>
-</button>
+<h2>Адаптивная контактная форма</h2>
 
-<a id="register" class="button purple" href="/register.html">
-  <i class="fa fa-user-plus"></i>
-  <span>Зарегистрироваться</span>
-</a>
-<div id="scroll-top">
-<button><span data-hover="Наверх"><i class="fa fa-arrow-up"></i></span></button>
+<div class="container">
+  <form action="#">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Имя</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Ваше имя..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Фамилия</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Страна</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="finland">Финляндия</option>
+          <option value="germany">Германия</option>
+          <option value="italy">Италия</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Тема</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Напишите что-нибудь.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Отправить">
+    </div>
+  </form>
 </div>
