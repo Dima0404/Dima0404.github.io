@@ -1,393 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-/*!    SWFObject v2.3.20130521 <http://github.com/swfobject/swfobject>
-    is released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
-*/
-var swfobject=function(){var D="undefined",r="object",T="Shockwave Flash",Z="ShockwaveFlash.ShockwaveFlash",q="application/x-shockwave-flash",S="SWFObjectExprInst",x="onreadystatechange",Q=window,h=document,t=navigator,V=false,X=[],o=[],P=[],K=[],I,p,E,B,L=false,a=false,m,G,j=true,l=false,O=function(){var ad=typeof h.getElementById!=D&&typeof h.getElementsByTagName!=D&&typeof h.createElement!=D,ak=t.userAgent.toLowerCase(),ab=t.platform.toLowerCase(),ah=ab?/win/.test(ab):/win/.test(ak),af=ab?/mac/.test(ab):/mac/.test(ak),ai=/webkit/.test(ak)?parseFloat(ak.replace(/^.*webkit\/(\d+(\.\d+)?).*$/,"$1")):false,aa=t.appName==="Microsoft Internet Explorer",aj=[0,0,0],ae=null;if(typeof t.plugins!=D&&typeof t.plugins[T]==r){ae=t.plugins[T].description;if(ae&&(typeof t.mimeTypes!=D&&t.mimeTypes[q]&&t.mimeTypes[q].enabledPlugin)){V=true;aa=false;ae=ae.replace(/^.*\s+(\S+\s+\S+$)/,"$1");aj[0]=n(ae.replace(/^(.*)\..*$/,"$1"));aj[1]=n(ae.replace(/^.*\.(.*)\s.*$/,"$1"));aj[2]=/[a-zA-Z]/.test(ae)?n(ae.replace(/^.*[a-zA-Z]+(.*)$/,"$1")):0}}else{if(typeof Q.ActiveXObject!=D){try{var ag=new ActiveXObject(Z);if(ag){ae=ag.GetVariable("$version");if(ae){aa=true;ae=ae.split(" ")[1].split(",");aj=[n(ae[0]),n(ae[1]),n(ae[2])]}}}catch(ac){}}}return{w3:ad,pv:aj,wk:ai,ie:aa,win:ah,mac:af}}(),i=function(){if(!O.w3){return}if((typeof h.readyState!=D&&(h.readyState==="complete"||h.readyState==="interactive"))||(typeof h.readyState==D&&(h.getElementsByTagName("body")[0]||h.body))){f()}if(!L){if(typeof h.addEventListener!=D){h.addEventListener("DOMContentLoaded",f,false)}if(O.ie){h.attachEvent(x,function aa(){if(h.readyState=="complete"){h.detachEvent(x,aa);f()}});if(Q==top){(function ac(){if(L){return}try{h.documentElement.doScroll("left")}catch(ad){setTimeout(ac,0);return}f()}())}}if(O.wk){(function ab(){if(L){return}if(!/loaded|complete/.test(h.readyState)){setTimeout(ab,0);return}f()}())}}}();function f(){if(L||!document.getElementsByTagName("body")[0]){return}try{var ac,ad=C("span");ad.style.display="none";ac=h.getElementsByTagName("body")[0].appendChild(ad);ac.parentNode.removeChild(ac);ac=null;ad=null}catch(ae){return}L=true;var aa=X.length;for(var ab=0;ab<aa;ab++){X[ab]()}}function M(aa){if(L){aa()}else{X[X.length]=aa}}function s(ab){if(typeof Q.addEventListener!=D){Q.addEventListener("load",ab,false)}else{if(typeof h.addEventListener!=D){h.addEventListener("load",ab,false)}else{if(typeof Q.attachEvent!=D){g(Q,"onload",ab)}else{if(typeof Q.onload=="function"){var aa=Q.onload;Q.onload=function(){aa();ab()}}else{Q.onload=ab}}}}}function Y(){var aa=h.getElementsByTagName("body")[0];var ae=C(r);ae.setAttribute("style","visibility: hidden;");ae.setAttribute("type",q);var ad=aa.appendChild(ae);if(ad){var ac=0;(function ab(){if(typeof ad.GetVariable!=D){try{var ag=ad.GetVariable("$version");if(ag){ag=ag.split(" ")[1].split(",");O.pv=[n(ag[0]),n(ag[1]),n(ag[2])]}}catch(af){O.pv=[8,0,0]}}else{if(ac<10){ac++;setTimeout(ab,10);return}}aa.removeChild(ae);ad=null;H()}())}else{H()}}function H(){var aj=o.length;if(aj>0){for(var ai=0;ai<aj;ai++){var ab=o[ai].id;var ae=o[ai].callbackFn;var ad={success:false,id:ab};if(O.pv[0]>0){var ah=c(ab);if(ah){if(F(o[ai].swfVersion)&&!(O.wk&&O.wk<312)){w(ab,true);if(ae){ad.success=true;ad.ref=z(ab);ad.id=ab;ae(ad)}}else{if(o[ai].expressInstall&&A()){var al={};al.data=o[ai].expressInstall;al.width=ah.getAttribute("width")||"0";al.height=ah.getAttribute("height")||"0";if(ah.getAttribute("class")){al.styleclass=ah.getAttribute("class")}if(ah.getAttribute("align")){al.align=ah.getAttribute("align")}var ak={};var aa=ah.getElementsByTagName("param");var af=aa.length;for(var ag=0;ag<af;ag++){if(aa[ag].getAttribute("name").toLowerCase()!="movie"){ak[aa[ag].getAttribute("name")]=aa[ag].getAttribute("value")}}R(al,ak,ab,ae)}else{b(ah);if(ae){ae(ad)}}}}}else{w(ab,true);if(ae){var ac=z(ab);if(ac&&typeof ac.SetVariable!=D){ad.success=true;ad.ref=ac;ad.id=ac.id}ae(ad)}}}}}X[0]=function(){if(V){Y()}else{H()}};function z(ac){var aa=null,ab=c(ac);if(ab&&ab.nodeName.toUpperCase()==="OBJECT"){if(typeof ab.SetVariable!==D){aa=ab}else{aa=ab.getElementsByTagName(r)[0]||ab}}return aa}function A(){return !a&&F("6.0.65")&&(O.win||O.mac)&&!(O.wk&&O.wk<312)}function R(ad,ae,aa,ac){var ah=c(aa);aa=W(aa);a=true;E=ac||null;B={success:false,id:aa};if(ah){if(ah.nodeName.toUpperCase()=="OBJECT"){I=J(ah);p=null}else{I=ah;p=aa}ad.id=S;if(typeof ad.width==D||(!/%$/.test(ad.width)&&n(ad.width)<310)){ad.width="310"}if(typeof ad.height==D||(!/%$/.test(ad.height)&&n(ad.height)<137)){ad.height="137"}var ag=O.ie?"ActiveX":"PlugIn",af="MMredirectURL="+encodeURIComponent(Q.location.toString().replace(/&/g,"%26"))+"&MMplayerType="+ag+"&MMdoctitle="+encodeURIComponent(h.title.slice(0,47)+" - Flash Player Installation");if(typeof ae.flashvars!=D){ae.flashvars+="&"+af}else{ae.flashvars=af}if(O.ie&&ah.readyState!=4){var ab=C("div");
-aa+="SWFObjectNew";ab.setAttribute("id",aa);ah.parentNode.insertBefore(ab,ah);ah.style.display="none";y(ah)}u(ad,ae,aa)}}function b(ab){if(O.ie&&ab.readyState!=4){ab.style.display="none";var aa=C("div");ab.parentNode.insertBefore(aa,ab);aa.parentNode.replaceChild(J(ab),aa);y(ab)}else{ab.parentNode.replaceChild(J(ab),ab)}}function J(af){var ae=C("div");if(O.win&&O.ie){ae.innerHTML=af.innerHTML}else{var ab=af.getElementsByTagName(r)[0];if(ab){var ag=ab.childNodes;if(ag){var aa=ag.length;for(var ad=0;ad<aa;ad++){if(!(ag[ad].nodeType==1&&ag[ad].nodeName=="PARAM")&&!(ag[ad].nodeType==8)){ae.appendChild(ag[ad].cloneNode(true))}}}}}return ae}function k(aa,ab){var ac=C("div");ac.innerHTML="<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'><param name='movie' value='"+aa+"'>"+ab+"</object>";return ac.firstChild}function u(ai,ag,ab){var aa,ad=c(ab);ab=W(ab);if(O.wk&&O.wk<312){return aa}if(ad){var ac=(O.ie)?C("div"):C(r),af,ah,ae;if(typeof ai.id==D){ai.id=ab}for(ae in ag){if(ag.hasOwnProperty(ae)&&ae.toLowerCase()!=="movie"){e(ac,ae,ag[ae])}}if(O.ie){ac=k(ai.data,ac.innerHTML)}for(af in ai){if(ai.hasOwnProperty(af)){ah=af.toLowerCase();if(ah==="styleclass"){ac.setAttribute("class",ai[af])}else{if(ah!=="classid"&&ah!=="data"){ac.setAttribute(af,ai[af])}}}}if(O.ie){P[P.length]=ai.id}else{ac.setAttribute("type",q);ac.setAttribute("data",ai.data)}ad.parentNode.replaceChild(ac,ad);aa=ac}return aa}function e(ac,aa,ab){var ad=C("param");ad.setAttribute("name",aa);ad.setAttribute("value",ab);ac.appendChild(ad)}function y(ac){var ab=c(ac);if(ab&&ab.nodeName.toUpperCase()=="OBJECT"){if(O.ie){ab.style.display="none";(function aa(){if(ab.readyState==4){for(var ad in ab){if(typeof ab[ad]=="function"){ab[ad]=null}}ab.parentNode.removeChild(ab)}else{setTimeout(aa,10)}}())}else{ab.parentNode.removeChild(ab)}}}function U(aa){return(aa&&aa.nodeType&&aa.nodeType===1)}function W(aa){return(U(aa))?aa.id:aa}function c(ac){if(U(ac)){return ac}var aa=null;try{aa=h.getElementById(ac)}catch(ab){}return aa}function C(aa){return h.createElement(aa)}function n(aa){return parseInt(aa,10)}function g(ac,aa,ab){ac.attachEvent(aa,ab);K[K.length]=[ac,aa,ab]}function F(ac){ac+="";var ab=O.pv,aa=ac.split(".");aa[0]=n(aa[0]);aa[1]=n(aa[1])||0;aa[2]=n(aa[2])||0;return(ab[0]>aa[0]||(ab[0]==aa[0]&&ab[1]>aa[1])||(ab[0]==aa[0]&&ab[1]==aa[1]&&ab[2]>=aa[2]))?true:false}function v(af,ab,ag,ae){var ad=h.getElementsByTagName("head")[0];if(!ad){return}var aa=(typeof ag=="string")?ag:"screen";if(ae){m=null;G=null}if(!m||G!=aa){var ac=C("style");ac.setAttribute("type","text/css");ac.setAttribute("media",aa);m=ad.appendChild(ac);if(O.ie&&typeof h.styleSheets!=D&&h.styleSheets.length>0){m=h.styleSheets[h.styleSheets.length-1]}G=aa}if(m){if(typeof m.addRule!=D){m.addRule(af,ab)}else{if(typeof h.createTextNode!=D){m.appendChild(h.createTextNode(af+" {"+ab+"}"))}}}}function w(ad,aa){if(!j){return}var ab=aa?"visible":"hidden",ac=c(ad);if(L&&ac){ac.style.visibility=ab}else{if(typeof ad==="string"){v("#"+ad,"visibility:"+ab)}}}function N(ab){var ac=/[\\\"<>\.;]/;var aa=ac.exec(ab)!=null;return aa&&typeof encodeURIComponent!=D?encodeURIComponent(ab):ab}var d=function(){if(O.ie){window.attachEvent("onunload",function(){var af=K.length;for(var ae=0;ae<af;ae++){K[ae][0].detachEvent(K[ae][1],K[ae][2])}var ac=P.length;for(var ad=0;ad<ac;ad++){y(P[ad])}for(var ab in O){O[ab]=null}O=null;for(var aa in swfobject){swfobject[aa]=null}swfobject=null})}}();return{registerObject:function(ae,aa,ad,ac){if(O.w3&&ae&&aa){var ab={};ab.id=ae;ab.swfVersion=aa;ab.expressInstall=ad;ab.callbackFn=ac;o[o.length]=ab;w(ae,false)}else{if(ac){ac({success:false,id:ae})}}},getObjectById:function(aa){if(O.w3){return z(aa)}},embedSWF:function(af,al,ai,ak,ab,ae,ad,ah,aj,ag){var ac=W(al),aa={success:false,id:ac};if(O.w3&&!(O.wk&&O.wk<312)&&af&&al&&ai&&ak&&ab){w(ac,false);M(function(){ai+="";ak+="";var an={};if(aj&&typeof aj===r){for(var aq in aj){an[aq]=aj[aq]}}an.data=af;an.width=ai;an.height=ak;var ar={};if(ah&&typeof ah===r){for(var ao in ah){ar[ao]=ah[ao]}}if(ad&&typeof ad===r){for(var am in ad){if(ad.hasOwnProperty(am)){var ap=(l)?encodeURIComponent(am):am,at=(l)?encodeURIComponent(ad[am]):ad[am];if(typeof ar.flashvars!=D){ar.flashvars+="&"+ap+"="+at}else{ar.flashvars=ap+"="+at}}}}if(F(ab)){var au=u(an,ar,al);if(an.id==ac){w(ac,true)}aa.success=true;aa.ref=au;aa.id=au.id}else{if(ae&&A()){an.data=ae;R(an,ar,al,ag);return}else{w(ac,true)}}if(ag){ag(aa)}})}else{if(ag){ag(aa)}}},switchOffAutoHideShow:function(){j=false},enableUriEncoding:function(aa){l=(typeof aa===D)?true:aa},ua:O,getFlashPlayerVersion:function(){return{major:O.pv[0],minor:O.pv[1],release:O.pv[2]}},hasFlashPlayerVersion:F,createSWF:function(ac,ab,aa){if(O.w3){return u(ac,ab,aa)}else{return undefined}},showExpressInstall:function(ac,ad,aa,ab){if(O.w3&&A()){R(ac,ad,aa,ab)}},removeSWF:function(aa){if(O.w3){y(aa)}},createCSS:function(ad,ac,ab,aa){if(O.w3){v(ad,ac,ab,aa)}},addDomLoadEvent:M,addLoadEvent:s,getQueryParamValue:function(ad){var ac=h.location.search||h.location.hash;
-if(ac){if(/\?/.test(ac)){ac=ac.split("?")[1]}if(ad==null){return N(ac)}var ab=ac.split("&");for(var aa=0;aa<ab.length;aa++){if(ab[aa].substring(0,ab[aa].indexOf("="))==ad){return N(ab[aa].substring((ab[aa].indexOf("=")+1)))}}}return""},expressInstallCallback:function(){if(a){var aa=c(S);if(aa&&I){aa.parentNode.replaceChild(I,aa);if(p){w(p,true);if(O.ie){I.style.display="block"}}if(E){E(B)}}a=false}},version:"2.3"}}();
-import importlib
-import threading
-import subprocess
-import socket
-import logging
-import time
-import redis
-import exceptions
-from client import Client
-from inventory import Inventory
-from parser import Parser
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
 
-modules = ["client_error", "house", "outside", "user_rating", "mail", "avatar",
-           "location_game", "relations", "social_request", "user_rating",
-           "competition", "furniture", "billing", "component", "support",
-           "passport", "player", "statistics", "shop", "mobile", "confirm",
-           "craft", "profession", "inventory", "event"]
+* {
+    box-sizing: border-box;
+}
 
+/* Add padding to containers */
+.container {
+    padding: 16px;
+    background-color: white;
+}
 
-def get_git_revision_short_hash():
-    try:
-        return subprocess.check_output(["git", "rev-parse",
-                                        "--short", "HEAD"]).strip().decode()
-    except (FileNotFoundError, subprocess.CalledProcessError):
-        return "Unknown"
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
 
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
 
-class Server():
-    def __init__(self, host="0.0.0.0", port=8123):
-        self.online = []
-        self.inv = {}
-        self.redis = redis.Redis(decode_responses=True)
-        self.parser = Parser()
-        self.conflicts = self.parser.parse_conflicts()
-        self.achievements = self.parser.parse_achievements()
-        self.trophies = self.parser.parse_trophies()
-        self.game_items = self.parser.parse_game_items()
-        self.appearance = self.parser.parse_appearance()
-        self.modules = {}
-        for item in modules:
-            module = importlib.import_module(f"modules.{item}")
-            class_ = getattr(module, module.class_name)
-            self.modules[class_.prefix] = class_(self)
-        self.revision = get_git_revision_short_hash()
-        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.sock.bind((host, port))
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
 
-    def listen(self):
-        self.sock.listen(5)
-        logging.info("Server is ready to accept connections")
-        thread = threading.Thread(target=self._background)
-        thread.daemon = True
-        thread.start()
-        while True:
-            client, address = self.sock.accept()
-            thread = threading.Thread(target=Client(self).handle,
-                                      args=(client, address))
-            thread.daemon = True
-            thread.start()
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
 
-    def process_data(self, data, client):
-        if not client.uid:
-            if data["type"] != 1:
-                client.connection.shutdown(2)
-            self.auth(data["msg"], client)
-            return
-        if data["type"] == 2:
-            client.connection.shutdown(2)
-            return
-        elif data["type"] == 34:
-            prefix = data["msg"][1].split(".")[0]
-            if prefix not in self.modules:
-                logging.warning(f"Command {data['msg'][1]} not found")
-                return
-            self.modules[prefix].on_message(data["msg"], client)
+.registerbtn:hover {
+    opacity: 1;
+}
 
-    def auth(self, msg, client):
-        uid = self.redis.get(f"auth:{msg[2]}")
-        if not uid:
-            client.connection.shutdown(2)
-            return
-        banned = self.redis.get(f"uid:{uid}:banned")
-        if banned:
-            ban_time = int(self.redis.get(f"uid:{uid}:ban_time"))
-            client.send([10, "User is banned",
-                         {"duration": 999999, "banTime": ban_time,
-                          "notes": "Опа бан", "reviewerId": banned,
-                          "reasonId": 0, "unbanType": "none", "leftTime": 0,
-                          "id": None, "reviewState": 1, "userId": uid,
-                          "moderatorId": banned}], type_=2)
-            client.connection.shutdown(2)
-            return
-        for tmp in self.online:
-            if tmp.uid == uid:
-                try:
-                    tmp.connection.shutdown(2)
-                except OSError:
-                    pass
-                break
-        client.uid = uid
-        self.online.append(client)
-        self.redis.set(f"uid:{uid}:lvt", int(time.time()))
-        if uid not in self.inv:
-            self.inv[uid] = Inventory(self, uid)
-        else:
-            self.inv[uid].expire = None
-        client.send([client.uid, True, False, False], type_=1)
-        client.checksummed = True
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
 
-    def get_user_data(self, uid):
-        pipe = self.redis.pipeline()
-        pipe.get(f"uid:{uid}:slvr").get(f"uid:{uid}:enrg")
-        pipe.get(f"uid:{uid}:gld").get(f"uid:{uid}:exp").get(f"uid:{uid}:emd")
-        pipe.get(f"uid:{uid}:lvt").get(f"uid:{uid}:trid").get(f"uid:{uid}:crt")
-        pipe.get(f"uid:{uid}:hrt").get(f"uid:{uid}:role")
-        result = pipe.execute()
-        if not result[0]:
-            return None
-        if result[7]:
-            crt = int(result[7])
-        else:
-            crt = self.modules["a"].update_crt(uid)
-        if result[8]:
-            hrt = int(result[8])
-        else:
-            hrt = self.modules["frn"].update_hrt(uid)
-        if result[9]:
-            role = int(result[9])
-        else:
-            role = 0
-        return {"uid": uid, "slvr": int(result[0]), "enrg": int(result[1]),
-                "gld": int(result[2]), "exp": int(result[3]),
-                "emd": int(result[4]), "lvt": int(result[5]), "crt": crt,
-                "hrt": hrt, "trid": result[6], "role": role}
-
-    def get_appearance(self, uid):
-        apprnc = self.redis.lrange(f"uid:{uid}:appearance", 0, -1)
-        if not apprnc:
-            return False
-        return {"n": apprnc[0], "nct": int(apprnc[1]), "g": int(apprnc[2]),
-                "sc": int(apprnc[3]), "ht": int(apprnc[4]),
-                "hc": int(apprnc[5]), "brt": int(apprnc[6]),
-                "brc": int(apprnc[7]), "et": int(apprnc[8]),
-                "ec": int(apprnc[9]), "fft": int(apprnc[10]),
-                "fat": int(apprnc[11]), "fac": int(apprnc[12]),
-                "ss": int(apprnc[13]), "ssc": int(apprnc[14]),
-                "mt": int(apprnc[15]), "mc": int(apprnc[16]),
-                "sh": int(apprnc[17]), "shc": int(apprnc[18]),
-                "rg": int(apprnc[19]), "rc": int(apprnc[20]),
-                "pt": int(apprnc[21]), "pc": int(apprnc[22]),
-                "bt": int(apprnc[23]), "bc": int(apprnc[24])}
-
-    def get_clothes(self, uid, type_):
-        clothes = []
-        for item in self.redis.smembers(f"uid:{uid}:wearing"):
-            if "_" in item:
-                id_, clid = item.split("_")
-                clothes.append({"id": id_, "clid": clid})
-            else:
-                clothes.append({"id": item, "clid": None})
-        if type_ == 1:
-            clths = {"cc": "casual", "ccltns": {"casual": {"cct": [],
-                                                           "cn": "",
-                                                           "ctp": "casual"}}}
-            for item in clothes:
-                if item["clid"]:
-                    clths["ccltns"]["casual"]["cct"].append(f"{item['id']}:"
-                                                            f"{item['clid']}")
-                else:
-                    clths["ccltns"]["casual"]["cct"].append(item["id"])
-        elif type_ == 2:
-            clths = {"clths": []}
-            for item in clothes:
-                clths["clths"].append({"tpid": item["id"],
-                                       "clid": item["clid"]})
-        elif type_ == 3:
-            clths = {"cct": []}
-            for item in clothes:
-                if item["clid"]:
-                    clths["cct"].append(f"{item['id']}:{item['clid']}")
-                else:
-                    clths["cct"].append(item["id"])
-        return clths
-
-    def get_room_items(self, uid, room):
-        if "_" in room:
-            raise exceptions.WrongRoom()
-        items = []
-        for name in self.redis.smembers(f"rooms:{uid}:{room}:items"):
-            item = self.redis.lrange(f"rooms:{uid}:{room}:items:{name}", 0, -1)
-            name, lid = name.split("_")
-            if len(item) == 5:
-                items.append({"tpid": name, "x": float(item[0]),
-                              "y": float(item[1]), "z": float(item[2]),
-                              "d": int(item[3]), "lid": int(lid),
-                              "rid": item[4]})
-            else:
-                items.append({"tpid": name, "x": float(item[0]),
-                              "y": float(item[1]), "z": float(item[2]),
-                              "d": int(item[3]), "lid": int(lid)})
-        return items
-
-    def _background(self):
-        while True:
-            logging.info(f"Players online: {len(self.online)}")
-            for uid in self.inv.copy():
-                inv = self.inv[uid]
-                if inv.expire and time.time() - inv.expire > 0:
-                    del self.inv[uid]
-            time.sleep(60)
-
-
-if __name__ == "__main__":
-    logging.basicConfig(format="%(levelname)-8s [%(asctime)s]  %(message)s",
-                        datefmt="%H:%M:%S", level=logging.DEBUG)
-    server = Server()
-    server.listen()
-    [bot]
-tg_token = qwerty123
-    import string
-import random
-
-
-def random_string(string_length=20):
-    letters = string.ascii_letters
-    return ''.join(random.choice(letters) for i in range(string_length))
-
-
-def new_account(redis):
-    redis.incr("uids")
-    uid = redis.get("uids")
-    while True:
-        passwd = random_string()
-        if redis.get(f"auth:{passwd}"):
-            continue
-        break
-    pipe = redis.pipeline()
-    pipe.set(f"auth:{passwd}", uid)
-    pipe.set(f"uid:{uid}:slvr", 1000)
-    pipe.set(f"uid:{uid}:gld", 6)
-    pipe.set(f"uid:{uid}:enrg", 100)
-    pipe.set(f"uid:{uid}:exp", 500000)
-    pipe.set(f"uid:{uid}:emd", 0)
-    pipe.set(f"uid:{uid}:lvt", 0)
-    pipe.sadd(f"uid:{uid}:items", "blackMobileSkin")
-    pipe.rpush(f"uid:{uid}:items:blackMobileSkin", "gm", 1)
-    pipe.sadd(f"rooms:{uid}", "livingroom")
-    pipe.rpush(f"rooms:{uid}:livingroom", "#livingRoom", 1)
-    for i in range(1, 6):
-        pipe.sadd(f"rooms:{uid}", i)
-        pipe.rpush(f"rooms:{uid}:{i}", f"Комната {i}", 2)
-    pipe.execute()
-    return (uid, passwd)
-
-
-def reset_account(redis, uid):
-    pipe = redis.pipeline()
-    pipe.set(f"uid:{uid}:slvr", 1000)
-    pipe.set(f"uid:{uid}:gld", 6)
-    pipe.set(f"uid:{uid}:enrg", 100)
-    pipe.delete(f"uid:{uid}:trid")
-    pipe.delete(f"uid:{uid}:crt")
-    pipe.delete(f"uid:{uid}:hrt")
-    pipe.delete(f"uid:{uid}:wearing")
-    pipe.delete(f"uid:{uid}:appearance")
-    for item in redis.smembers(f"uid:{uid}:items"):
-        pipe.delete(f"uid:{uid}:items:{item}")
-    pipe.delete(f"uid:{uid}:items")
-    for room in redis.smembers(f"rooms:{uid}"):
-        for item in redis.smembers(f"rooms:{uid}:{room}:items"):
-            pipe.delete(f"rooms:{uid}:{room}:items:{item}")
-        pipe.delete(f"rooms:{uid}:{room}:items")
-        pipe.delete(f"rooms:{uid}:{room}")
-    pipe.delete(f"rooms:{uid}")
-    pipe.sadd(f"uid:{uid}:items", "blackMobileSkin")
-    pipe.rpush(f"uid:{uid}:items:blackMobileSkin", "gm", 1)
-    pipe.sadd(f"rooms:{uid}", "livingroom")
-    pipe.rpush(f"rooms:{uid}:livingroom", "#livingRoom", 1)
-    for i in range(1, 6):
-        pipe.sadd(f"rooms:{uid}", i)
-        pipe.rpush(f"rooms:{uid}:{i}", f"Комната {i}", 2)
-    pipe.execute(
-    import configparser
-import redis
-from aiogram import Bot, Dispatcher, executor, types
-import bot_common
-config = configparser.ConfigParser()
-config.read('bot.ini')
-TOKEN = config["bot"]["tg_token"]
-issues_link = "https://github.com/AvaCity/avacity-2.0/issues"
-
-bot = Bot(token=TOKEN)
-dp = Dispatcher(bot)
-r = redis.Redis(decode_responses=True)
-
-
-@dp.message_handler(commands=["start", "help"])
-async def send_welcome(message: types.Message):
-    await message.reply("Привет!\nЯ бот для выдачи паролей для сервера на "
-                        "базе исходного кода AvaCity 2.0! Администрация "
-                        "этого сервера никак не связана с AvaCity.\n"
-                        "Чтобы получить пароль, введите команду /password\n"
-                        "Смена пароля - /change_password\nСброс аккаунта - "
-                        f"/reset\nОбо всех багах писать на {issues_link}\n"
-                        "Приятной игры!")
-
-
-@dp.message_handler(commands=["password"])
-async def password(message: types.Message):
-    passwd = r.get(f"tg:{message.from_user.id}")
-    if passwd:
-        uid = r.get(f"auth:{passwd}")
-    else:
-        uid, passwd = bot_common.new_account(r)
-        r.set(f"tg:{message.from_user.id}", passwd)
-    await message.reply(f"Ваш логин: {uid}\nВаш пароль: {passwd}")
-
-
-@dp.message_handler(commands=["change_password"])
-async def change_password(message: types.Message):
-    passwd = r.get(f"tg:{message.from_user.id}")
-    if not passwd:
-        return await message.reply("Ваш аккаунт не создан")
-    while True:
-        new_passwd = bot_common.random_string()
-        if r.get(f"auth:{new_passwd}"):
-            continue
-        break
-    uid = r.get(f"auth:{passwd}")
-    r.delete(f"auth:{passwd}")
-    r.set(f"auth:{new_passwd}", uid)
-    r.set(f"tg:{message.from_user.id}", new_passwd)
-    await message.reply(f"Ваш новый пароль: {new_passwd}")
-
-
-@dp.message_handler(commands=["reset"])
-async def reset(message: types.Message):
-    passwd = r.get(f"tg:{message.from_user.id}")
-    if not passwd:
-        return await message.reply("Ваш аккаунт не создан")
-    uid = r.get(f"auth:{passwd}")
-    bot_common.reset_account(r, uid)
-    await message.reply(f"Ваш аккаунт был сброшен")
-
-if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True)
-    import hashlib
-import zipfile
-import json
-import os
-
-os.chdir("..")
-z = zipfile.ZipFile("files/data/config_all_ru.zip", mode="w")
-for root, dirs, files in os.walk("config_all_ru"):
-    for file in files:
-        z.write(os.path.join(root, file),
-                arcname=os.path.join(root,
-                                     file).split("config_all_ru/")[1])
-z.close()
-with open("files/data/config_all_ru.zip", mode="rb") as f:
-    hash_ = hashlib.md5(f.read()).hexdigest()
-os.rename("files/data/config_all_ru.zip",
-          f"files/data/config_all_ru_{hash_}.zip")
-with open("files/versions.json") as f:
-    versions = json.load(f)
-versions["data/config_all_ru.zip"] = hash_
-with open("files/versions.json", "w") as f:
-    f.write(json.dumps(versions))
-print(f"Готово, файл config_all_ru_{hash_}.zip(уже записан в versions.json)")
-      
-#!/bin/sh
-redis-cli FLUSHDB
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
 </style>
+</head>
+<body>
 
-<?xml version="1.0" encoding="UTF-8" ?>
-<dictionary>
-    <locale name="ru">
-        <message key="showModeratorActions">Действия модератора</message>
-        <message key="moderatorRatingsLabel">Рейтинг модераторов</message>
-        <message key="checkSocialAPI">Проверка социального API</message>
-        <message key="clothesPostEditor">Редактор одежды для постов</message>
-        <message key="findUserButtonLabel">Найти пользователя</message>
-        <message key="reconnectButtonLabel">Перезайти как:</message>
-    </locale>
-</dictionary>
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>
